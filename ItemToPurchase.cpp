@@ -11,26 +11,26 @@ using namespace std;
 
 #include "ItemToPurchase.h"
 
-ItemToPurchase::ItemToPurchase(string itemName, double itemPrice, int itemQuantity) {
+ItemToPurchase::ItemToPurchase(){
     itemName = "none";
     itemPrice = 0.0;
     itemQuantity = 0;
 }
-void SetName(string userName){
-    
+void ItemToPurchase::SetName(string userName){
+    itemName = userName;
 }
-void GetName(){
-    
+string ItemToPurchase::GetName(){
+    return itemName;
 }
-void SetPrice(double userPrice){
-    
+void ItemToPurchase::SetPrice(double userPrice){
+    itemPrice = userPrice;
 }
-void GetPrice(){
-    
+double ItemToPurchase::GetPrice(){
+    return itemPrice;
 }
-void SetQuantity(int userQuantity){
-    
+void ItemToPurchase::SetQuantity(int userQuantity){
+    itemQuantity = userQuantity;
 }
-void GetQuantity(){
-    
+int ItemToPurchase::GetQuantity(){
+    return itemQuantity;
 }

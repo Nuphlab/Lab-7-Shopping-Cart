@@ -7,17 +7,16 @@
 
 #ifndef ItemToPurchase_h
 #define ItemToPurchase_h
-#include <iostream>
-#include <string>
 
 class ItemToPurchase {
     public:
         void SetName(string userName);
-        void GetName();
+        string GetName();
         void SetPrice(double userPrice);
-        void GetPrice();
+        double GetPrice();
         void SetQuantity(int userQuantity);
-        void GetQuantity();
+        int GetQuantity();
+        ItemToPurchase();
     
     private:
         string itemName;
