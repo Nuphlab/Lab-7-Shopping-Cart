@@ -7,6 +7,9 @@ using namespace std;
 ShoppingCart::ShoppingCart(string custName, string date) {
    custName = "none";
    date = "January 1, 2016";
+
+   this->custName = custName;
+   this->date = date;
 }
 void ShoppingCart::AddToCart() {
 
