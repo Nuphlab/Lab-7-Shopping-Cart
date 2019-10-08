@@ -1,10 +1,15 @@
 #ifndef ShoppingCart_h
 #define ShoppingCart_h
+#include <vector>
+#include <iostream>
+#include <string>
+using namespace std;
 
 class ShoppingCart {
    public:
+      ShoppingCart();
       ShoppingCart(string custName, string date);
-      void AddToCart();
+      void AddToCart(string custName, string date);
       void RemoveFromCart();
       void UpdateQuantity();
       string GetName();
