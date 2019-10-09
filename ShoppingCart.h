@@ -12,7 +12,9 @@ class ShoppingCart {
       void AddToCart(string custName, string date);
       void RemoveFromCart();
       void UpdateQuantity();
+      void SetName(string custName);
       string GetName();
+      void SetDate(string Date);
       string GetDate();
       int GetQuantity();
       double GetTotalCost();

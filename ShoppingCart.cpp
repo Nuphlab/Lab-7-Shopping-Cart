@@ -23,8 +23,14 @@ void ShoppingCart::RemoveFromCart() {
 void ShoppingCart::UpdateQuantity() {
 
 }
+void ShoppingCart::SetName(string custName) {
+   this->custName = custName;
+}
 string ShoppingCart::GetName() {
    return custName;
+}
+void ShoppingCart::SetDate(string date) {
+   this->date = date;
 }
 string ShoppingCart::GetDate() {
    return date;
@@ -39,5 +45,10 @@ void ShoppingCart::PrintCostAndQuantity() {
 
 }
 void ShoppingCart::PrintDescription() {
-
+   /*Mary Jane Lewis's Shopping Cart - September 1, 2017
+   Shopping cart is empty.*/
+   cout << custName << "'s Shopping Cart - " << date << endl;
+   if (GetQuantity() == 0) {
+      cout << "Shopping cart is empty" << endl;
+   }
 }
