@@ -24,7 +24,7 @@ class ShoppingCart {
 	private:
       string custName;
       string date;
-      vector<string> items;
+      vector<ItemToPurchase> items;
 };
 
 #endif

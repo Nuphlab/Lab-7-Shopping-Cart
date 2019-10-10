@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include "ShoppingCart.h"
+#include "ItemToPurchase.h"
 using namespace std;
 
 ShoppingCart::ShoppingCart() {

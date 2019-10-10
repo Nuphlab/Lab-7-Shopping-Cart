@@ -1,6 +1,7 @@
 #include <string>
 #include <iostream>
 #include "ShoppingCart.h"
+#include "ItemToPurchase.h"
 using namespace std;
 
 int main() {
