@@ -10,15 +10,12 @@
 using namespace std;
 
 #include "ItemToPurchase.h"
+#include "ShoppingCart.h"
 
 ItemToPurchase::ItemToPurchase() {
    itemName = "none";
    itemPrice = 0.0;
    itemQuantity = 0;
-}
-string ItemToPurchase::SetDescription(string itemDescription)
-{
-   this->itemDescription = itemDescription;
 }
 ItemToPurchase::ItemToPurchase(string itemName, string itemDescription, double itemPrice, int itemQuantity) {
    itemName = "none";
@@ -31,7 +28,7 @@ ItemToPurchase::ItemToPurchase(string itemName, string itemDescription, double i
    this->itemQuantity = itemQuantity;
    this->itemDescription = itemDescription;
 }
-string ItemToPurchase::SetDescription(string itemDescription) {
+void ItemToPurchase::SetDescription(string itemDescription) {
    this->itemDescription = itemDescription;
 }
 void ItemToPurchase::GetDescription() {

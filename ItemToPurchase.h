@@ -7,6 +7,9 @@
 
 #ifndef ItemToPurchase_h
 #define ItemToPurchase_h
+#include <iostream>
+#include <string>
+using namespace std;
 
 class ItemToPurchase {
 public:
@@ -18,7 +21,7 @@ public:
    int GetQuantity();
    ItemToPurchase();
    ItemToPurchase(string itemName, string itemDescription, double itemPrice, int itemQuantity);
-   string SetDescription(string itemDescription);
+   void SetDescription(string itemDescription);
    void GetDescription();
    void PrintCostAndInfo();
    void PrintNameAndDescription();

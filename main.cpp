@@ -13,7 +13,8 @@ int main() {
    string itemPrice;
    string itemDescription;
    string itemQuantity;
-   ShoppingCart item;
+   ShoppingCart person;
+   vector <ItemToPurchase> items;
 
    cout << "Enter Customer's Name:" << endl;
    getline(cin, userName);
@@ -39,6 +40,7 @@ int main() {
          cin.ignore();
       }
       if (userOption == "options") {
+         cout << "MENU" << endl;
          cout << "add - Add item to cart" << endl;
          cout << "remove - Remove item from cart" << endl;
          cout << "change - Change item quantity" << endl;
@@ -47,21 +49,18 @@ int main() {
          cout << "options - Print the options menu" << endl;
          cout << "quit - Quit" << endl;
          cout << endl;
-         cout << "Enter option:";
+         cout << "Enter option:" << endl;
          cin >> userOption;
          cin.ignore();
       }
       if (userOption == "add") {
          cout << "Enter the item name:" << endl;
-         cin >> itemName;
-         cin.ignore();
+         getline(cin, itemName);
          cout << "Enter the item description:" << endl;
-         cin >> itemDescription;
-         cin.ignore();
+         getline(cin, itemName);
          cout << "Enter the item price:" << endl;
          cin >> itemPrice;
          cin.ignore();
-         cout << endl;
          cout << "Enter the item quantity:" << endl;
          cin >> itemQuantity;
          cin.ignore();
@@ -73,12 +72,12 @@ int main() {
 
       }
       else if (userOption == "descriptions") {
-         item.SetName(userName);
-         item.SetDate(userDate);
-         item.PrintDescription();
+         person.SetName(userName);
+         person.SetDate(userDate);
+         person.PrintDescription();
       }
       else if (userOption == "cart") {
-         item.PrintDescription();
+         person.PrintDescription();
       }
       cout << "Enter option:";
       cin >> userOption;

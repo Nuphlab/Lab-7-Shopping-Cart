@@ -50,6 +50,9 @@ void ShoppingCart::PrintDescription() {
    Shopping cart is empty.*/
    cout << custName << "'s Shopping Cart - " << date << endl;
    if (GetQuantity() == 0) {
-      cout << "Shopping cart is empty" << endl;
+      cout << "Shopping cart is empty." << endl << endl;
+   }
+   else {
+      cout << "Item Descriptions" << endl;
    }
 }
