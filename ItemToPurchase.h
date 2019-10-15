@@ -9,6 +9,7 @@
 #define ItemToPurchase_h
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 class ItemToPurchase {
@@ -20,9 +21,9 @@ public:
    void SetQuantity(int userQuantity);
    int GetQuantity();
    ItemToPurchase();
-   ItemToPurchase(string itemName, string itemDescription, double itemPrice, int itemQuantity);
+   ItemToPurchase(string& itemName, string& itemDescription, double& itemPrice, int& itemQuantity);
    void SetDescription(string itemDescription);
-   void GetDescription();
+   string GetDescription();
    void PrintCostAndInfo();
    void PrintNameAndDescription();
 
@@ -31,5 +32,6 @@ private:
    double itemPrice;
    int itemQuantity;
    string itemDescription;
+   vector<ItemToPurchase> items;
 };
 #endif /* ItemToPurchase_hpp */

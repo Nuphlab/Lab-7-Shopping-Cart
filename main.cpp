@@ -1,5 +1,6 @@
 #include <string>
 #include <iostream>
+#include <vector>
 #include "ShoppingCart.h"
 #include "ItemToPurchase.h"
 using namespace std;
@@ -10,11 +11,12 @@ int main() {
    string userOption;
    string userChoice;
    string itemName;
-   string itemPrice;
+   double itemPrice;
    string itemDescription;
-   string itemQuantity;
+   int itemQuantity;
    ShoppingCart person;
-   vector <ItemToPurchase> items;
+   ItemToPurchase list;
+   vector<ItemToPurchase> items;
 
    cout << "Enter Customer's Name:" << endl;
    getline(cin, userName);
@@ -57,13 +59,21 @@ int main() {
          cout << "Enter the item name:" << endl;
          getline(cin, itemName);
          cout << "Enter the item description:" << endl;
-         getline(cin, itemName);
+         getline(cin, itemDescription);
          cout << "Enter the item price:" << endl;
          cin >> itemPrice;
          cin.ignore();
          cout << "Enter the item quantity:" << endl;
          cin >> itemQuantity;
          cin.ignore();
+
+         list.SetName(itemName);
+         list.SetDescription(itemDescription);
+         list.SetPrice(itemPrice);
+         list.SetQuantity(itemQuantity);
+
+         items.push_back(list);
+         person.AddToCart(items);
       }
       else if (userOption == "remove") {
 
@@ -77,7 +87,9 @@ int main() {
          person.PrintDescription();
       }
       else if (userOption == "cart") {
-         person.PrintDescription();
+         person.SetName(userName);
+         person.SetDate(userDate);
+         person.PrintCostAndQuantity();
       }
       cout << "Enter option:";
       cin >> userOption;

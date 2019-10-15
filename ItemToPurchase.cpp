@@ -17,7 +17,7 @@ ItemToPurchase::ItemToPurchase() {
    itemPrice = 0.0;
    itemQuantity = 0;
 }
-ItemToPurchase::ItemToPurchase(string itemName, string itemDescription, double itemPrice, int itemQuantity) {
+ItemToPurchase::ItemToPurchase(string& itemName, string& itemDescription, double& itemPrice, int& itemQuantity) {
    itemName = "none";
    itemDescription = "none";
    itemPrice = 0.0;
@@ -31,8 +31,8 @@ ItemToPurchase::ItemToPurchase(string itemName, string itemDescription, double i
 void ItemToPurchase::SetDescription(string itemDescription) {
    this->itemDescription = itemDescription;
 }
-void ItemToPurchase::GetDescription() {
-   cout << itemDescription;
+string ItemToPurchase::GetDescription() {
+   return itemDescription;
 }
 void ItemToPurchase::PrintCostAndInfo() {
    cout << itemName << " " << itemQuantity << " " << "@ " << itemPrice << " = " << itemPrice * itemQuantity << endl;
