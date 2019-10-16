@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <iomanip>
 #include "ShoppingCart.h"
 #include "ItemToPurchase.h"
 using namespace std;
@@ -43,8 +44,22 @@ double ShoppingCart::GetTotalCost() {
    return 0;
 }
 void ShoppingCart::PrintCostAndQuantity() {
+   int totalItems = 0;
+   for (int i = 0; i < items.size(); ++i) {
+      totalItems += items.at(i).GetQuantity();
+   }
+
    cout << custName << "'s Shopping Cart - " << date << endl;
-   cout << "Number of items: " << items.size() << endl;
+   cout << "Number of items: " << totalItems << endl << endl << endl;
+   
+   double totalPrice = 0.00;
+   for (int i = 0; i < items.size(); ++i) {
+      cout << items.at(i).GetName() << " " << items.at(i).GetQuantity() << " @ $" << fixed << setprecision(2) << items.at(i).GetPrice() << " = $" << fixed << setprecision(2) <<  fixed << setprecision(2) << (static_cast<double>(items.at(i).GetQuantity()) * items.at(i).GetPrice()) << endl;
+      totalPrice += (static_cast<double>(items.at(i).GetQuantity())* items.at(i).GetPrice());
+   }
+
+   cout << "Total: " << totalPrice << endl;
+   cout << endl << endl;
 }
 void ShoppingCart::SetQuantity(int size) {
 

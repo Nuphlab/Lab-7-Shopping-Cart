@@ -36,10 +36,7 @@ int main() {
          cout << "cart - Output shopping cart" << endl;
          cout << "options - Print the options menu" << endl;
          cout << "quit - Quit" << endl << endl;
-
-         cout << "Enter option:" << endl;
-         cin >> userOption;
-         cin.ignore();
+         cout << endl;
       }
       if (userOption == "options") {
          cout << "MENU" << endl;
@@ -67,18 +64,51 @@ int main() {
          cin >> itemQuantity;
          cin.ignore();
 
-         list.SetName(itemName);
-         list.SetDescription(itemDescription);
-         list.SetPrice(itemPrice);
-         list.SetQuantity(itemQuantity);
+         for (int i = 0; i < 1; ++i) {
+            bool copy = false;
+            for (int j = 0; j < items.size(); ++j) {
+               if (items.at(i).GetName() == itemName) {
+                  copy = true;
+               }
+            }
+            if (copy == true) {
+               cout << "Item is already in cart. Nothing added." << endl << endl;
+            }
+            else {
+               list.SetName(itemName);
+               list.SetDescription(itemDescription);
+               list.SetPrice(itemPrice);
+               list.SetQuantity(itemQuantity);
 
-         items.push_back(list);
-         person.AddToCart(items);
+               items.push_back(list);
+               person.AddToCart(items);
+            }
+         }
       }
       else if (userOption == "remove") {
 
       }
       else if (userOption == "change") {
+         string newItem = "";
+         int newQuantity = 0;
+         cout << "Enter the item name:" << endl;
+         getline(cin, newItem);
+         cout << "Enter the new quantity:" << endl;
+         cin >> newQuantity;
+         cin.ignore();
+
+         for (int i = 0; i < 1; ++i) {
+            bool copy = false;
+            for (int j = 0; j < items.size(); ++j) {
+               if (items.at(j).GetName() == newItem) {
+                  copy = true;
+                  items.at(j).SetQuantity(newQuantity);
+               }
+            }
+            if (copy == false) {
+               cout << "Item not found in cart. Nothing modified." << endl << endl;
+            }
+         }
 
       }
       else if (userOption == "descriptions") {
