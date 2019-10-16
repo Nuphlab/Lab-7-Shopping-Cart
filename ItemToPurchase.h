@@ -21,7 +21,7 @@ public:
    void SetQuantity(int userQuantity);
    int GetQuantity();
    ItemToPurchase();
-   ItemToPurchase(string& itemName, string& itemDescription, double& itemPrice, int& itemQuantity);
+   ItemToPurchase(string itemName, string itemDescription, double itemPrice, int itemQuantity);
    void SetDescription(string itemDescription);
    string GetDescription();
    void PrintCostAndInfo();

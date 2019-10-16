@@ -17,7 +17,7 @@ ItemToPurchase::ItemToPurchase() {
    itemPrice = 0.0;
    itemQuantity = 0;
 }
-ItemToPurchase::ItemToPurchase(string& itemName, string& itemDescription, double& itemPrice, int& itemQuantity) {
+ItemToPurchase::ItemToPurchase(string itemName, string itemDescription, double itemPrice, int itemQuantity) {
    itemName = "none";
    itemDescription = "none";
    itemPrice = 0.0;

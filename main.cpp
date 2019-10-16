@@ -103,6 +103,7 @@ int main() {
                if (items.at(j).GetName() == newItem) {
                   copy = true;
                   items.at(j).SetQuantity(newQuantity);
+                  person.AddToCart(items);
                }
             }
             if (copy == false) {

@@ -22,8 +22,8 @@ void ShoppingCart::AddToCart(vector<ItemToPurchase> items) {
 void ShoppingCart::RemoveFromCart() {
 
 }
-void ShoppingCart::UpdateQuantity() {
-
+int ShoppingCart::UpdateQuantity(int quantity) {
+   return quantity;
 }
 void ShoppingCart::SetName(string custName) {
    this->custName = custName;

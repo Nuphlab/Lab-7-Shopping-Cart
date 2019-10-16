@@ -12,7 +12,7 @@ class ShoppingCart {
       ShoppingCart(string custName, string date);
       void AddToCart(vector<ItemToPurchase> items);
       void RemoveFromCart();
-      void UpdateQuantity();
+      int UpdateQuantity(int quantity);
       void SetName(string custName);
       string GetName();
       void SetDate(string Date);
