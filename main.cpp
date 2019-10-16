@@ -135,7 +135,12 @@ int main() {
       else if (userOption == "cart") {
          person.SetName(userName);
          person.SetDate(userDate);
-         person.PrintCostAndQuantity();
+         if (person.GetQuantity() == 0) {
+            person.PrintDescription();
+         }
+         else {
+            person.PrintCostAndQuantity();
+         }
       }
       cout << "Enter option:";
       cin >> userOption;

@@ -58,7 +58,7 @@ void ShoppingCart::PrintCostAndQuantity() {
       totalPrice += (static_cast<double>(items.at(i).GetQuantity())* items.at(i).GetPrice());
    }
 
-   cout << "Total: " << totalPrice << endl;
+   cout << "Total: $" << totalPrice << endl;
    cout << endl << endl;
 }
 void ShoppingCart::SetQuantity(int size) {
