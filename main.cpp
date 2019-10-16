@@ -29,6 +29,7 @@ int main() {
    
    while (userOption != "quit") {
       if (userOption != "add" && userOption != "remove" && userOption != "change" && userOption != "descriptions" && userOption != "cart" && userOption != "options" && userOption != "quit") {
+         cout << "Menu" << endl;
          cout << "add - Add item to cart" << endl;
          cout << "remove - Remove item from cart" << endl;
          cout << "change - Change item quantity" << endl;
@@ -48,9 +49,7 @@ int main() {
          cout << "options - Print the options menu" << endl;
          cout << "quit - Quit" << endl;
          cout << endl;
-         cout << "Enter option:" << endl;
-         cin >> userOption;
-         cin.ignore();
+         
       }
       if (userOption == "add") {
          cout << "Enter the item name:" << endl;
@@ -67,7 +66,7 @@ int main() {
          for (int i = 0; i < 1; ++i) {
             bool copy = false;
             for (int j = 0; j < items.size(); ++j) {
-               if (items.at(i).GetName() == itemName) {
+               if (items.at(j).GetName() == itemName) {
                   copy = true;
                }
             }
@@ -86,7 +85,23 @@ int main() {
          }
       }
       else if (userOption == "remove") {
+         string itemName;
+         cout << "Enter name of the item to remove:" << endl;
+         getline(cin, itemName);
 
+         for (int i = 0; i < 1; ++i) {
+            bool copy = false;
+            for (int j = 0; j < items.size(); ++j) {
+               if (items.at(j).GetName() == itemName) {
+                  copy = true;
+                  items.erase(items.begin() + j);
+                  person.AddToCart(items);
+               }
+            }
+            if (copy == false) {
+               cout << "Item not found in cart. Nothing removed." << endl << endl;
+            }
+         }
       }
       else if (userOption == "change") {
          string newItem = "";
@@ -126,7 +141,8 @@ int main() {
       cin >> userOption;
       cin.ignore();
    }
+
    cout << "Goodbye.";
-   system("pause");
+
 	return 0;
 }
