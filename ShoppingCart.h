@@ -7,30 +7,29 @@
 using namespace std;
 
 class ShoppingCart {
-   public:
-      ShoppingCart();
-      ShoppingCart(string custName, string date);
-      void AddToCart(vector<ItemToPurchase> items);
-      void RemoveFromCart();
-      int UpdateQuantity(int quantity);
-      void SetName(string custName);
-      string GetName();
-      void SetDate(string Date);
-      string GetDate();
-      void SetQuantity(int size);
-      int GetQuantity();
-      double GetTotalCost();
-      void PrintCostAndQuantity();
-      void PrintDescription();
-      string itemName;
-      string itemDescription;
-      double itemPrice;
-      int itemQuantity;
+public:
+	ShoppingCart();
+	ShoppingCart(string custName, string date);
+	void AddToCart(vector<ItemToPurchase> items);
+	void RemoveFromCart();
+	int UpdateQuantity(int quantity);
+	void SetName(string custName);
+	string GetName();
+	void SetDate(string Date);
+	string GetDate();
+	void SetQuantity(int size);
+	int GetQuantity();
+	double GetTotalCost();
+	void PrintCostAndQuantity();
+	void PrintDescription();
+	string itemName;
+	string itemDescription;
+	double itemPrice;
+	int itemQuantity;
 
-	private:
-      string custName;
-      string date;
-      vector<ItemToPurchase> items;
+private:
+	string custName;
+	string date;
+	vector<ItemToPurchase> items;
 };
-
 #endif

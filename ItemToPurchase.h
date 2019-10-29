@@ -14,24 +14,24 @@ using namespace std;
 
 class ItemToPurchase {
 public:
-   void SetName(string userName);
-   string GetName();
-   void SetPrice(double userPrice);
-   double GetPrice();
-   void SetQuantity(int userQuantity);
-   int GetQuantity();
-   ItemToPurchase();
-   ItemToPurchase(string itemName, string itemDescription, double itemPrice, int itemQuantity);
-   void SetDescription(string itemDescription);
-   string GetDescription();
-   void PrintCostAndInfo();
-   void PrintNameAndDescription();
+	void SetName(string userName);
+	string GetName();
+	void SetPrice(double userPrice);
+	double GetPrice();
+	void SetQuantity(int userQuantity);
+	int GetQuantity();
+	ItemToPurchase();
+	ItemToPurchase(string itemName, string itemDescription, double itemPrice, int itemQuantity);
+	void SetDescription(string itemDescription);
+	string GetDescription();
+	void PrintCostAndInfo();
+	void PrintNameAndDescription();
 
 private:
-   string itemName;
-   double itemPrice;
-   int itemQuantity;
-   string itemDescription;
-   vector<ItemToPurchase> items;
+	string itemName;
+	double itemPrice;
+	int itemQuantity;
+	string itemDescription;
+	vector<ItemToPurchase> items;
 };
 #endif /* ItemToPurchase_hpp */
